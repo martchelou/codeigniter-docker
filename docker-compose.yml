@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    image: codeigniter
+    container_name: codeigniter-env
+    restart: always
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8080:80
