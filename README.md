@@ -8,7 +8,7 @@ What we have here:
 
 - docker-compose.yml to turn it more easy to handle the container with start and stop cli commands
 
-Just put in your root folder and be happy =D. Remember to erase thit _public_ folder here before start to use on your environment
+Just put in your root folder and be happy =D. Remember to erase this _public_ folder here before start to use on your environment
 
 ## troubleshooting
 
