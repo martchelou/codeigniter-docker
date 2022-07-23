@@ -3,7 +3,7 @@ services:
   web:
     build: .
     image: codeigniter
-    container_name: codeigniter-env
+    container_name: codeigniter-environment
     restart: always
     volumes:
       - ./:/var/www/html
