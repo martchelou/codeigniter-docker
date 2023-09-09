@@ -1,11 +1,29 @@
 version: '3.7'
 services:
   web:
-    build: .
-    image: codeigniter
-    container_name: codeigniter-environment
-    restart: always
+    build: .    
+    container_name: codeigniter-web    
     volumes:
       - ./:/var/www/html
     ports:
-      - 8888:80
+      - 8888:80    
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    container_name: codeigniter-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./localdata/:/var/lib/mysql
+    ports:
+      - 3306:3306
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: codeigniter-phpmyadmin
+    ports:
+      - 8090:80
+    environment:
+      - PMA_ARBITRARY=codeigniter-db
+    depends_on:
+      - db

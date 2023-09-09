@@ -13,3 +13,11 @@ Just put in your root folder and be happy =D. Remember to erase this _public_ fo
 ## troubleshooting
 
 Set permission on cache folder to work fine
+
+## docker-compose.yml
+
+I just add some containers to work with localdatabase and phpmyadmin on docker. If you already install docker just do docker compose -f "docker-compose.yml" up -d --build in your terminal and have fun.
+
+That command will create an localdata as docker volume folder on you root folder, put this folder on .gitignore to avoid up that folder to github. That approach is only to local development.
+
+Feel free to rename the containers on docker-compose file
